@@ -5,7 +5,7 @@
 */
 
 let mioArray = new Array();                          // dichiaro una variabile di tipo array. Non specifico la dimensione.
-
+// questo codice è bellissimo
 // Inserisco 5 valori casuali in un array
 for (i = 0; i < 5; i++)
 {   
