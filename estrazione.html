@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Estrazione</title>
+        <style>
+           
+            ul {
+            background: #ff9999;
+            padding: 20px;          /* box model shortend: spaziatura 20 px tra content e border */
+            padding-left: 5px;      /* box model: spaziatura 5px da border sinistro */
+            height: 200px;
+            width: 200px;
+            list-style-type:none;   /* elimina i pallini dagli elementi della <ul> */
+            font-size: larger ;
+            }
+
+            ul li {
+            background: #ffe5e5;
+            padding: 5px;           /* box model shortend: spaziatura 5px tra content e border */
+            margin-left: 35px;      /* box model: spazio tra margine sinistro e bordo del contenitore */
+            }
+
+            #prescelta{
+                margin-top: 50px;
+                padding: 10px;
+                width: 200px;
+                font-size: larger;
+                background: green;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+
+        <div id="lista">
+            <ul>
+                <li id="Francesca">Francesca</li>
+                <li id="Laura P">Laura P</li>
+                <li id="Laura Z">Laura Z</li>
+                <li id="Maria Giovanna">Maria Giovanna</li>
+                <li id="Valentina">Valentina</li>
+            </ul>
+        </div>
+
+
+        <button onclick="estrai()">Estrai</button>
+
+        <div id="prescelta"></div>
+
+        <script>
+            var lis = document.getElementsByTagName("li");
+            console.log(lis);
+            function estrai(){
+                var rnd = Math.floor(Math.random() * (lis.length));
+                document.getElementById("prescelta").innerHTML = lis[rnd].id;
+
+                var element = document.getElementById(lis[rnd].id);
+                element.parentNode.removeChild(element);   
+            }
+        </script>
+
+
+    </body>
+
+</html>

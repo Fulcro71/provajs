@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+
+<body>
+   
+    <div id="renderList">
+
+    </div>
+    
+<script>
+    // esegui questa funzione quando la pagina è stata caricata
+    // window.onload = function() {
+
+    // crea un paio di elementi in una pagina HTML altrimenti vuota
+
+        /* const uList = document.createElement("ul");
+        document.body.appendChild(uList); */
+     
+            //uList.appendChild(heading_text);
+            
+            (function () {
+                var ul = document.createElement('ul');  //prepara ul come elemento <ul> del DOM
+                ul.setAttribute('id', 'proList');       // assegna un id all'elemento <ul>
+
+                var t, tt;
+                productList = ['Electronics Watch', 'House wear Items', 'Kids wear', 'Women Fashion'];
+
+                document.getElementById('renderList').appendChild(ul);  // crea la lista ul all'interno dell'elemenmto di id='renderlist'
+                productList.forEach(renderProductList); // 
+
+                function renderProductList(element, index, arr) {
+                    var li = document.createElement('li');
+                    li.setAttribute('class', 'item');
+
+                    ul.appendChild(li);
+
+                    t = document.createTextNode(element);
+
+                    li.innerHTML = li.innerHTML + element;
+                }
+            })();
+
+
+
+  
+</script>
+</body>
+
+</html>

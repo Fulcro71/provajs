@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style-type: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h2>Creazione di elementi paragrafo inseriti via Javascript</h2>
+        </header>
+        <p>Inserisci del testo da introdurre in paragrafi:</p>
+        <input type="text" id="fname" name="fname"><button onclick="retrieve()">Esegui</button>
+
+
+    </div>
+
+    <!--<div id="risultato"></div>-->
+
+    <script>
+        /* Esempio di createElement:
+         *   creazione di un nuovo elemento (tag) di tipo p (paragraph) */
+
+        /* Il tag p viene creato al momento della pressione del pulsante, nonostante il pulsante 
+                (in teoria) richiami la funzione retrieve e non l'intero script 
+                Spiegazione: il metodo di creazione (appendChild) viene chiamato all'interno della funzione,
+                che a sua volta viene avviata alla pressione del pulsante.*/
+        const heading = document.createElement("p");
+
+        function retrieve() {
+            /* la variabile ingresso conterrà il contenuto dedl textbox, dal momento in cui viene premuto il pulsante. */
+            var ingresso = document.getElementById("fname").value;
+
+            const heading_text = document.createTextNode(ingresso);
+            heading.appendChild(heading_text);
+            document.body.appendChild(heading);
+        }
+    </script>
+</body>
+</html>
