@@ -17,7 +17,7 @@ for (let i = 0; i < myArrayLength ; i++)
     process.stdout.write(`${myArray[i]} `);
     sum+=myArray[i];
 }
-
+//abbiamo fatto una modifica incredibile
 // Calcolo il valore medio
 average=sum / myArrayLength;
 console.log("\n");
